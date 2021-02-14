@@ -1,0 +1,9 @@
+/Users/alisher/Projects/MicroservicesApp/src/Ordering/Ordering.Core/bin/Debug/netcoreapp3.1/Ordering.Core.deps.json
+/Users/alisher/Projects/MicroservicesApp/src/Ordering/Ordering.Core/bin/Debug/netcoreapp3.1/Ordering.Core.dll
+/Users/alisher/Projects/MicroservicesApp/src/Ordering/Ordering.Core/bin/Debug/netcoreapp3.1/Ordering.Core.pdb
+/Users/alisher/Projects/MicroservicesApp/src/Ordering/Ordering.Core/obj/Debug/netcoreapp3.1/Ordering.Core.csprojAssemblyReference.cache
+/Users/alisher/Projects/MicroservicesApp/src/Ordering/Ordering.Core/obj/Debug/netcoreapp3.1/Ordering.Core.AssemblyInfoInputs.cache
+/Users/alisher/Projects/MicroservicesApp/src/Ordering/Ordering.Core/obj/Debug/netcoreapp3.1/Ordering.Core.AssemblyInfo.cs
+/Users/alisher/Projects/MicroservicesApp/src/Ordering/Ordering.Core/obj/Debug/netcoreapp3.1/Ordering.Core.csproj.CoreCompileInputs.cache
+/Users/alisher/Projects/MicroservicesApp/src/Ordering/Ordering.Core/obj/Debug/netcoreapp3.1/Ordering.Core.dll
+/Users/alisher/Projects/MicroservicesApp/src/Ordering/Ordering.Core/obj/Debug/netcoreapp3.1/Ordering.Core.pdb

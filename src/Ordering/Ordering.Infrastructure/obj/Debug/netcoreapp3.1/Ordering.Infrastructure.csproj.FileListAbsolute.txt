@@ -1,0 +1,15 @@
+/Users/alisher/Projects/MicroservicesApp/src/Ordering/Ordering.Infrastructure/bin/Debug/netcoreapp3.1/Ordering.Infrastructure.deps.json
+/Users/alisher/Projects/MicroservicesApp/src/Ordering/Ordering.Infrastructure/bin/Debug/netcoreapp3.1/Ordering.Infrastructure.runtimeconfig.json
+/Users/alisher/Projects/MicroservicesApp/src/Ordering/Ordering.Infrastructure/bin/Debug/netcoreapp3.1/Ordering.Infrastructure.runtimeconfig.dev.json
+/Users/alisher/Projects/MicroservicesApp/src/Ordering/Ordering.Infrastructure/bin/Debug/netcoreapp3.1/Ordering.Infrastructure.dll
+/Users/alisher/Projects/MicroservicesApp/src/Ordering/Ordering.Infrastructure/bin/Debug/netcoreapp3.1/Ordering.Infrastructure.pdb
+/Users/alisher/Projects/MicroservicesApp/src/Ordering/Ordering.Infrastructure/bin/Debug/netcoreapp3.1/Ordering.Core.dll
+/Users/alisher/Projects/MicroservicesApp/src/Ordering/Ordering.Infrastructure/bin/Debug/netcoreapp3.1/Ordering.Core.pdb
+/Users/alisher/Projects/MicroservicesApp/src/Ordering/Ordering.Infrastructure/obj/Debug/netcoreapp3.1/Ordering.Infrastructure.csprojAssemblyReference.cache
+/Users/alisher/Projects/MicroservicesApp/src/Ordering/Ordering.Infrastructure/obj/Debug/netcoreapp3.1/Ordering.Infrastructure.AssemblyInfoInputs.cache
+/Users/alisher/Projects/MicroservicesApp/src/Ordering/Ordering.Infrastructure/obj/Debug/netcoreapp3.1/Ordering.Infrastructure.AssemblyInfo.cs
+/Users/alisher/Projects/MicroservicesApp/src/Ordering/Ordering.Infrastructure/obj/Debug/netcoreapp3.1/Ordering.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/alisher/Projects/MicroservicesApp/src/Ordering/Ordering.Infrastructure/obj/Debug/netcoreapp3.1/Ordering.Infrastructure.csproj.CopyComplete
+/Users/alisher/Projects/MicroservicesApp/src/Ordering/Ordering.Infrastructure/obj/Debug/netcoreapp3.1/Ordering.Infrastructure.dll
+/Users/alisher/Projects/MicroservicesApp/src/Ordering/Ordering.Infrastructure/obj/Debug/netcoreapp3.1/Ordering.Infrastructure.pdb
+/Users/alisher/Projects/MicroservicesApp/src/Ordering/Ordering.Infrastructure/obj/Debug/netcoreapp3.1/Ordering.Infrastructure.genruntimeconfig.cache

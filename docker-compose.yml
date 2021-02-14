@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  catalogdb:
+    image: mongo
+  catalog.api:
+    image: ${DOCKER_REGISTRY-}catalogapi
+    build:
+      context: .
+      dockerfile: src/Catalog/Catalog.API/Dockerfile
+  basketdb:
+    image: redis
+  basket.api:
+    image: ${DOCKER_REGISTRY-}basketapi
+    build:
+      context: .
+      dockerfile: src/Basket/Basket.API/Dockerfile
+  rabbitmq:
+      image: rabbitmq:3-management-alpine
+
