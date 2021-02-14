@@ -1,24 +1,45 @@
 ﻿<Properties StartupConfiguration="{4ECFDAD8-94FC-486F-92EB-B34DF0231A13}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/Ordering/Ordering.API/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/Ordering/Ordering.API/Startup.cs">
     <Files>
-      <File FileName="src/Ordering/Ordering.API/Controllers/OrderController.cs" Line="1" Column="1" />
-      <File FileName="src/Ordering/Ordering.API/Startup.cs" />
-      <File FileName="src/Ordering/Ordering.API/appsettings.json" />
-      <File FileName="src/Ordering/Ordering.API/RabbitMQ/EventBusRabbitMQConsumer.cs" />
-      <File FileName="src/Ordering/Ordering.API/Program.cs" Line="1" Column="1" />
+      <File FileName="src/Basket/Basket.API/Repositories/Interfaces/IBasketCartRepository.cs" Line="1" Column="1" />
+      <File FileName="src/Catalog/Catalog.API/Repositories/Interfaces/IProductRepository.cs" />
+      <File FileName="src/Catalog/Catalog.API/Repositories/ProductRepository.cs" />
+      <File FileName="src/Ordering/Ordering.Infrastructure/Repositories/OrderRepository.cs" />
+      <File FileName="src/Ordering/Ordering.Infrastructure/Repositories/Base/Repository.cs" />
+      <File FileName="src/Ordering/Ordering.API/RabbitMQ/EventBusRabbitMQConsumer.cs" Line="1" Column="1" />
+      <File FileName="src/Ordering/Ordering.API/Startup.cs" Line="15" Column="28" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MicroservicesApp" expanded="True">
             <Node name="src" expanded="True">
-              <Node name="Basket" expanded="True" />
-              <Node name="Catalog" expanded="True" />
-              <Node name="Common" expanded="True" />
+              <Node name="Basket" expanded="True">
+                <Node name="Basket.API" expanded="True">
+                  <Node name="Repositories" expanded="True">
+                    <Node name="Interfaces" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Common" expanded="True">
+                <Node name="EventBusRabbitMQ" expanded="True">
+                  <Node name="Events" expanded="True" />
+                  <Node name="Producers" expanded="True" />
+                </Node>
+              </Node>
               <Node name="Ordering" expanded="True">
-                <Node name="Ordering.API" expanded="True" selected="True">
+                <Node name="Ordering.API" expanded="True">
                   <Node name="Controllers" expanded="True" />
                   <Node name="RabbitMQ" expanded="True" />
+                  <Node name="Startup.cs" selected="True" />
+                </Node>
+                <Node name="Ordering.Core" expanded="True">
+                  <Node name="Entities" expanded="True" />
+                </Node>
+                <Node name="Ordering.Infrastructure" expanded="True">
+                  <Node name="Repositories" expanded="True">
+                    <Node name="Base" expanded="True" />
+                  </Node>
                 </Node>
               </Node>
             </Node>

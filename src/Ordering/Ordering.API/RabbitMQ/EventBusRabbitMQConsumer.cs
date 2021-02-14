@@ -3,20 +3,19 @@ using System.Text;
 using AutoMapper;
 using EventBusRabbitMQ;
 using EventBusRabbitMQ.Common;
-using Ordering.Core.Entities;
-using Ordering.Infrastructure.Data;
-using Ordering.Infrastructure.Repositories.Base;
+using EventBusRabbitMQ.Events;
+using Newtonsoft.Json;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
 namespace Ordering.API.RabbitMQ
 {
-    public class EventBusRabbitMQConsumer : Repository<Order>
+    public class EventBusRabbitMQConsumer
     {
         private readonly IRabbitMQConnection _connection;
         private readonly IMapper _mapper;
 
-        public EventBusRabbitMQConsumer(IRabbitMQConnection connection, IMapper mapper, OrderContext dbContext) : base(dbContext)
+        public EventBusRabbitMQConsumer(IRabbitMQConnection connection, IMapper mapper)
         {
             _connection = connection;
             _mapper = mapper;
@@ -37,14 +36,10 @@ namespace Ordering.API.RabbitMQ
         {
             if (e.RoutingKey == EventBusConstants.BasketCheckoutQueue)
             {
-                throw new NotImplementedException();
-                /*var body = e.Body.ToArray();
+                var body = e.Body.ToArray();
                 var message = Encoding.UTF8.GetString(body);
                 Console.WriteLine(" [x] Received {0}", message);
-
-                var order = _mapper.Map<Order>(message);
-                _dbContext.Orders.AddAsync(order);
-                _dbContext.SaveChangesAsync();*/
+                var order = JsonConvert.DeserializeObject<BasketCheckoutEvent>(message);
             }
         }
 

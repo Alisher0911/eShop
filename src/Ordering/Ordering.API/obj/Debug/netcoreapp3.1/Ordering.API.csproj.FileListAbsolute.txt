@@ -1,6 +1,5 @@
 /Users/alisher/Projects/MicroservicesApp/src/Ordering/Ordering.API/bin/Debug/netcoreapp3.1/appsettings.Development.json
 /Users/alisher/Projects/MicroservicesApp/src/Ordering/Ordering.API/bin/Debug/netcoreapp3.1/appsettings.json
-/Users/alisher/Projects/MicroservicesApp/src/Ordering/Ordering.API/bin/Debug/netcoreapp3.1/mono_crash.11a6748113.0.json
 /Users/alisher/Projects/MicroservicesApp/src/Ordering/Ordering.API/bin/Debug/netcoreapp3.1/Ordering.API.deps.json
 /Users/alisher/Projects/MicroservicesApp/src/Ordering/Ordering.API/bin/Debug/netcoreapp3.1/Ordering.API.runtimeconfig.json
 /Users/alisher/Projects/MicroservicesApp/src/Ordering/Ordering.API/bin/Debug/netcoreapp3.1/Ordering.API.runtimeconfig.dev.json
