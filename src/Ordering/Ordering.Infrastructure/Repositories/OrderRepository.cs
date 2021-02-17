@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Ordering.Core.Entities;
 using Ordering.Core.Repositories;
 using Ordering.Infrastructure.Data;
@@ -16,7 +18,7 @@ namespace Ordering.Infrastructure.Repositories
 
         public async Task<IEnumerable<Order>> GetOrderByUsername(string username)
         {
-            return (IEnumerable<Order>)await _dbContext.Orders.FindAsync(username);
+            return await _dbContext.Orders.Where(x => x.Username == username).ToListAsync();
         }
     }
 }
