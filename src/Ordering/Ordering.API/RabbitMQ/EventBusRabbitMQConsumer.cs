@@ -8,6 +8,7 @@ using EventBusRabbitMQ.Events;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using Ordering.Core.Entities;
+using Ordering.Core.Repositories;
 using Ordering.Infrastructure.Data;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
@@ -38,39 +39,25 @@ namespace Ordering.API.RabbitMQ
             channel.BasicConsume(queue: EventBusConstants.BasketCheckoutQueue, autoAck: true, consumer: consumer);
         }
 
-        private void OnReceivedEvent(object sender, BasicDeliverEventArgs e)
+        private async void OnReceivedEvent(object sender, BasicDeliverEventArgs e)
         {
             if (e.RoutingKey == EventBusConstants.BasketCheckoutQueue)
             {
-                var body = e.Body.ToArray();
-                var message = Encoding.UTF8.GetString(body);
+                var message = Encoding.UTF8.GetString(e.Body.Span);
                 Console.WriteLine(" [x] Received {0}", message);
                 var basketCheckout = JsonConvert.DeserializeObject<BasketCheckoutEvent>(message);
 
-                var scope = _scopeFactory.CreateScope();
-                var db = scope.ServiceProvider.GetRequiredService<OrderContext>();
-                var order = new Order
+                var order = _mapper.Map<Order>(basketCheckout);
+                if (order == null)
                 {
-                    Username = basketCheckout.Username,
-                    TotalPrice = basketCheckout.TotalPrice,
+                    throw new ApplicationException("Could not be mapped.");
+                }
 
-                    FirstName = basketCheckout.FirstName,
-                    LastName = basketCheckout.LastName,
-                    EmailAddress = basketCheckout.EmailAddress,
-                    AddressLine = basketCheckout.AddressLine,
-                    Country = basketCheckout.Country,
-                    State = basketCheckout.State,
-                    ZipCode = basketCheckout.ZipCode,
-
-                    CardName = basketCheckout.CardName,
-                    CardNumber = basketCheckout.CardNumber,
-                    Expiration = basketCheckout.Expiration,
-                    CVV = basketCheckout.CVV,
-                    PaymentMethod = (PaymentMethod)basketCheckout.PaymentMethod
-                };
-
-                db.Orders.Add(order);
-                db.SaveChanges();
+                using (var scope = _scopeFactory.CreateScope())
+                {
+                    var orderRepository = scope.ServiceProvider.GetRequiredService<IOrderRepository>();
+                    await orderRepository.AddAsync(order);
+                }
             }
         }
 
